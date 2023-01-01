@@ -2,6 +2,7 @@
   "name": "randomquote",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://nahedben.github.io/random_quote",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
     "@fortawesome/free-brands-svg-icons": "^6.2.1",
@@ -48,7 +49,6 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://github.com/nahedben/random_quote",
   "devDependencies": {
     "gh-pages": "^4.0.0"
   }
