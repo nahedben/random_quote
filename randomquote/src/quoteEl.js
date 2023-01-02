@@ -15,22 +15,52 @@ class QuoteBox extends React.Component {
       stcolor: "rgb(" + this.col1 + "," + this.col2 + "," + this.col3 + ")",
     };
     this.handleActualisation = this.handleActualisation.bind(this);
+    const bgrC = "rgb(" + this.col1 + "," + this.col2 + "," + this.col3 + ")";
   }
+  // const bgrC="rgb(" + this.col1 + "," + this.col2 + "," + this.col3 + ")"
   componentDidMount() {
-    let x =
-      "rgb(" +
-      this.state.col1 +
-      "," +
-      this.state.col2 +
-      "," +
-      this.state.col3 +
-      ")";
-    console.log(
-      this.state.col1 + ": " + this.state.col2 + ": " + this.state.col3
-    );
-    document.body.style.backgroundColor = x;
-    document.getElementById("new-quote").style.backgroundColor = x;
-    document.getElementById("new-quote").style.borderColor = x;
+    this.setState({
+      element: quotes[Math.floor(Math.random() * quotes.length)],
+      col1: Math.floor(Math.random() * 230),
+      col2: Math.floor(Math.random() * 230),
+      col3: Math.floor(Math.random() * 230),
+      stcolor:
+        "rgb(" +
+        this.state.col1 +
+        "," +
+        this.state.col2 +
+        "," +
+        this.state.col3 +
+        ")",
+    });
+    // let x =
+    //   "rgb(" +
+    //   this.state.col1 +
+    //   "," +
+    //   this.state.col2 +
+    //   "," +
+    //   this.state.col3 +
+    //   ")";
+
+    document.body.style.backgroundColor = this.state.stcolor;
+
+    document.getElementById("new-quote").style.backgroundColor = "black";
+    // "rgb(" +
+    // this.state.col1 +
+    // "," +
+    // this.state.col2 +
+    // "," +
+    // this.state.col3 +
+    // ")";
+    // document.getElementById("new-quote").style.backgroundColor = x;
+
+    // "rgb(" +
+    // this.state.col1 +
+    // "," +
+    // this.state.col2 +
+    // "," +
+    // this.state.col3 +
+    // ")";
     // document.getElementbon.style.backgroundColor = this.state.stcolor;
   }
 
@@ -49,17 +79,23 @@ class QuoteBox extends React.Component {
         this.state.col3 +
         ")",
     });
-    console.log(
-      this.state.col1 + ": " + this.state.col2 + ": " + this.state.col3
-    );
-    document.body.style.backgroundColor =
-      "rgb(" +
-      this.state.col1 +
-      "," +
-      this.state.col2 +
-      "," +
-      this.state.col3 +
-      ")";
+
+    document.body.style.backgroundColor = this.state.stcolor;
+    document.getElementById(
+      "new-quote"
+    ).style.backgroundColor = this.state.stcolor;
+    // document.getElementById("new-quote").style.borderColor = this.state.stcolor;
+    // document.body.style.backgroundColor = this.state.stcolor;
+    // document.getElementById(
+    //   "new-quote"
+    // ).style.backgroundColor = this.state.stcolor;
+    // "rgb(" +
+    //   this.state.col1 +
+    //   "," +
+    //   this.state.col2 +
+    //   "," +
+    //   this.state.col3 +
+    //   ")";
   }
   handleTweetPost(event) {}
 
@@ -69,24 +105,33 @@ class QuoteBox extends React.Component {
     const el2 = <FontAwesomeIcon icon={faQuoteLeft} />;
 
     return (
-      <div id="quote-box" className="quote-b" style={{ borderRadius: 5 }}>
+      <div
+        id="quote-box"
+        className="quote-b"
+        style={{ borderRadius: 5, backgroundColor: "#fefefe" }}
+      >
         <h2 id="text">
           {el2} {this.state.element.text}
         </h2>
         <h5
-          style={{ textAlign: "right", marginTop: "20px", fontSize: "0.8rem" }}
+          style={{
+            textAlign: "right",
+            marginTop: "20px",
+            fontSize: "0.8rem",
+            fontFamily: "sans-serif",
+            fontWeight: "bolder",
+          }}
           id="author"
         >
           De {this.state.element.author}
         </h5>
         <button
-          type="submit"
           class="btn btn-secondary"
           onClick={this.handleActualisation}
           id="new-quote"
           style={{
             margin: "10px",
-            backgroundColor: this.state.stcolor,
+            fontFamily: "sans-serif",
           }}
         >
           New Quote!!

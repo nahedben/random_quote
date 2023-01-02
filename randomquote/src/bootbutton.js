@@ -37,7 +37,7 @@ class SocialLink extends React.Component {
             <div style={{ width: "0.6rem", height: "1rem" }}></div>{" "}
           </spam>
           <a
-            href="https://www.facebook.com/sharer.php?u=http://localhost:3000/"
+            href="https://www.facebook.com/sharer.php?u=https://nahedben.github.io/random_quote/"
             target="_blank"
           >
             <i
