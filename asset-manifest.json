@@ -1,7 +1,7 @@
 {
   "main.css": "/random_quote/static/css/main.2015e904.chunk.css",
-  "main.js": "/random_quote/static/js/main.284bbf26.chunk.js",
-  "main.js.map": "/random_quote/static/js/main.284bbf26.chunk.js.map",
+  "main.js": "/random_quote/static/js/main.5e299dd3.chunk.js",
+  "main.js.map": "/random_quote/static/js/main.5e299dd3.chunk.js.map",
   "static/js/1.8a5b0b70.chunk.js": "/random_quote/static/js/1.8a5b0b70.chunk.js",
   "static/js/1.8a5b0b70.chunk.js.map": "/random_quote/static/js/1.8a5b0b70.chunk.js.map",
   "static/css/2.31aef720.chunk.css": "/random_quote/static/css/2.31aef720.chunk.css",
@@ -10,9 +10,9 @@
   "runtime~main.js": "/random_quote/static/js/runtime~main.ed9be416.js",
   "runtime~main.js.map": "/random_quote/static/js/runtime~main.ed9be416.js.map",
   "static/media/logo.svg": "/random_quote/static/media/logo.06e73328.svg",
-  "static/css/main.2015e904.chunk.css.map": "/random_quote/static/css/main.2015e904.chunk.css.map",
   "static/css/2.31aef720.chunk.css.map": "/random_quote/static/css/2.31aef720.chunk.css.map",
+  "static/css/main.2015e904.chunk.css.map": "/random_quote/static/css/main.2015e904.chunk.css.map",
   "index.html": "/random_quote/index.html",
-  "precache-manifest.e5e687e8c06c3cbf4b10e7681d5e4d3d.js": "/random_quote/precache-manifest.e5e687e8c06c3cbf4b10e7681d5e4d3d.js",
+  "precache-manifest.1f56197efea46175133c69305ad152b2.js": "/random_quote/precache-manifest.1f56197efea46175133c69305ad152b2.js",
   "service-worker.js": "/random_quote/service-worker.js"
 }
