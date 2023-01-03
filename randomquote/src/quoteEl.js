@@ -15,8 +15,8 @@ class QuoteBox extends React.Component {
       stcolor: "rgb(" + this.col1 + "," + this.col2 + "," + this.col3 + ")",
     };
     this.handleActualisation = this.handleActualisation.bind(this);
-    const bgrC = "rgb(" + this.col1 + "," + this.col2 + "," + this.col3 + ")";
   }
+
   // const bgrC="rgb(" + this.col1 + "," + this.col2 + "," + this.col3 + ")"
   componentDidMount() {
     this.setState({
@@ -33,35 +33,14 @@ class QuoteBox extends React.Component {
         this.state.col3 +
         ")",
     });
-    // let x =
-    //   "rgb(" +
-    //   this.state.col1 +
-    //   "," +
-    //   this.state.col2 +
-    //   "," +
-    //   this.state.col3 +
-    //   ")";
+    console.log(this.state.stcolor);
+    let a = Math.floor(Math.random() * 230);
+    let b = Math.floor(Math.random() * 230);
+    let c = Math.floor(Math.random() * 230);
+    let locColor = "rgb(" + a + "," + b + "," + c + ")";
+    document.body.style.backgroundColor = locColor;
 
-    document.body.style.backgroundColor = this.state.stcolor;
-
-    document.getElementById("new-quote").style.backgroundColor = "black";
-    // "rgb(" +
-    // this.state.col1 +
-    // "," +
-    // this.state.col2 +
-    // "," +
-    // this.state.col3 +
-    // ")";
-    // document.getElementById("new-quote").style.backgroundColor = x;
-
-    // "rgb(" +
-    // this.state.col1 +
-    // "," +
-    // this.state.col2 +
-    // "," +
-    // this.state.col3 +
-    // ")";
-    // document.getElementbon.style.backgroundColor = this.state.stcolor;
+    document.getElementById("new-quote").style.backgroundColor = locColor;
   }
 
   handleActualisation(event) {
@@ -84,18 +63,6 @@ class QuoteBox extends React.Component {
     document.getElementById(
       "new-quote"
     ).style.backgroundColor = this.state.stcolor;
-    // document.getElementById("new-quote").style.borderColor = this.state.stcolor;
-    // document.body.style.backgroundColor = this.state.stcolor;
-    // document.getElementById(
-    //   "new-quote"
-    // ).style.backgroundColor = this.state.stcolor;
-    // "rgb(" +
-    //   this.state.col1 +
-    //   "," +
-    //   this.state.col2 +
-    //   "," +
-    //   this.state.col3 +
-    //   ")";
   }
   handleTweetPost(event) {}
 
@@ -108,7 +75,7 @@ class QuoteBox extends React.Component {
       <div
         id="quote-box"
         className="quote-b"
-        style={{ borderRadius: 5, backgroundColor: "#fefefe" }}
+        style={{ borderRadius: 5, backgroundColor: "#fafafa" }}
       >
         <h2 id="text">
           {el2} {this.state.element.text}
